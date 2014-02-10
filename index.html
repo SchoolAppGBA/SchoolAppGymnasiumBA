@@ -22,51 +22,38 @@
         <h2>Herzlich Willkommen auf unserer Schulapp</h2>
 			<p>! Nur noch 1 Schritt ... dann gehts los !</p>
 			<p>Bitte gebe den Benutzernamen und das Passwort an, um den Vertretungsplan, den Speiseplan oder &auml;hnliches zu sehen.</p>
-        <form method="post" action="main.html" name="LoginForm">
+        <form method="post" action="" name="LoginForm">
         <div><p style="display:none" id="unameCheck">Bitte gib einen Benutzernamen an!</p></div>
-        <input name="uname" type="text" placeholder="Anmeldename ... " />
+        <input name="uname" id="username" type="text" placeholder="Anmeldename ... " />
         <div><p style="display:none" id="upassCheck">Bitte gib das richtige Passwort ein!</p></div>
-        <input name="upass" type="password" placeholder="*********"/>
-        <input name="senden" type="submit" value="Anmelden" />
+        <input id="password" name="upass" type="password" placeholder="*********"/>
+        <input id="login" onclick="check(this.form)" name="senden" type="submit" value="Anmelden"/>
         </form>
         <!-- Make the login -->
-          <script>
-  function checklogin(){
-  var uname = $("uname");
-  var upass = $("upass");
-  var senden = $("senden");
-  var erroruname = $("#unameCheck");
-  var errorupass = $("#upassCheck");
-  
-  if(uname == ""){
-			erroruname.show();
-			errorupass.show();
-			exit;
+          <script type="text/javascript">
+		  			
+			function showConfirm() {
+				navigator.notification.confirm(
+					'Falscher Benutzername oder Passwort', 
+					onConfirm,              
+					'Einloggen fehlgeschlagen!',            
+					'Neu'          
+				);
+			}
+	
+	
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.uname.value == "admin" && form.upass.value == "admin")
+  {
+    window.location.href = 'main.html';/*opens the target page while Id & password matches*/
   }
-  if(upass == ""){
-			erroruname.show();
-			errorupass.show();
-			exit;
+ else
+ {
+   showConfirm();
   }
-  if(uname != "admin"){
-			erroruname.show();
-			errorupass.show();
-			exit;
-	  }
-	  if(upass != "admin"){
-			erroruname.show();
-			errorupass.show();
-			exit;
-		  }
-	if(uname == "admin"){
-		alert("fast");
-		if(upass == "admin"){
-			   alert("fertig");
-			   $.mobile.changePage('#page2');
-		}
-	}
-  
-  };
+}
   </script>
         </div>
         <div id="footer" data-role="footer" data-position="fixed" data-theme="a">
