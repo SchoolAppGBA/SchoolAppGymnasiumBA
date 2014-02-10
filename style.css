@@ -18,13 +18,17 @@ height:auto;
 }
 
 div.ui-input-text {
-	width:60%;
-	margin: 0 auto 2% auto;
-	}
+padding: 0 .4em;
+margin: 0px auto 1%;
+}
 	
 .ui-btn {
-	width:60%;
-	margin: 0 auto 5% auto;
+display: block;
+text-align: center;
+cursor: pointer;
+position: relative;
+margin: 0 auto;
+padding: 0;
 }
 
 div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text, .ui-input-search input.ui-input-text {
@@ -32,8 +36,9 @@ div.ui-input-text input.ui-input-text, div.ui-input-text textarea.ui-input-text,
 }
 
 .ui-listview-inset .ui-li {
-	width: 70%;
-	margin: 0 auto;
+border-right-width: 1px;
+border-left-width: 1px;
+margin: 0 auto;
 }
 
 #footer {
