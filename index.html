@@ -27,46 +27,34 @@
         <input name="uname" type="text" placeholder="Anmeldename ... " />
         <div><p style="display:none" id="upassCheck">Bitte gib das richtige Passwort ein!</p></div>
         <input name="upass" type="password" placeholder="*********"/>
-        <input name="senden" type="submit" value="Anmelden" />
+        <input name="senden" type="submit" value="Anmelden" onclick="checklogin()"/>
         </form>
         <!-- Make the login -->
           <script>
+			function showConfirm() {
+				navigator.notification.confirm(
+					'Falscher Benutzername oder Passwort', 
+					onConfirm,              
+					'Einloggen fehlgeschlagen!',            
+					'Neu'          
+				);
+			}
+	
   function checklogin(){
   var uname = $("uname");
   var upass = $("upass");
   var senden = $("senden");
   var erroruname = $("#unameCheck");
   var errorupass = $("#upassCheck");
+
+  if(uname != "admin" && upass != "admin"){
+	showConfirm();
+	return false
+ }
+ else{
+ 
+ }
   
-  if(uname == ""){
-			erroruname.show();
-			errorupass.show();
-			exit;
-  }
-  if(upass == ""){
-			erroruname.show();
-			errorupass.show();
-			exit;
-  }
-  if(uname != "admin"){
-			erroruname.show();
-			errorupass.show();
-			exit;
-	  }
-	  if(upass != "admin"){
-			erroruname.show();
-			errorupass.show();
-			exit;
-		  }
-	if(uname == "admin"){
-		alert("fast");
-		if(upass == "admin"){
-			   alert("fertig");
-			   $.mobile.changePage('#page2');
-		}
-	}
-  
-  };
   </script>
         </div>
         <div id="footer" data-role="footer" data-position="fixed" data-theme="a">
