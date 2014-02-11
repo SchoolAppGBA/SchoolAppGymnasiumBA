@@ -1,12 +1,13 @@
 SchollApp
 =========
-Copyright Stefan Schmid
-Eigentum des Gymnasiums Bad Aibling
+Eigentum des Gymnasiums Bad Aibling.
 Bei verwendung bitte bescheid geben!
 
 Mit freundlichen Grüßen
 Stefan Schmid
 
+Copyright Stefan Schmid
 
 
-TODO :   -Login fertig machen 
+==
+TODO :  - Login mit Session erweitern!
