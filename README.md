@@ -1,4 +1,4 @@
-SchollApp
+SchoolApp
 =========
 Eigentum des Gymnasiums Bad Aibling.
 Bei verwendung bitte bescheid geben!
