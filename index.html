@@ -41,19 +41,19 @@
 				);
 			}
 	
-	
-function check(form)/*function to check userid & password*/
-{
- /*the following code checkes whether the entered userid and password are matching*/
- if(form.uname.value == "admin" && form.upass.value == "admin")
-  {
-    window.location.href = 'main.html';/*opens the target page while Id & password matches*/
-  }
- else
- {
-   showConfirm();
-  }
-}
+			/* Check, if uname = Username && upass = password */
+			function check(form)/*function to check userid & password*/
+			{
+			 /*the following code checkes whether the entered userid and password are matching*/
+			 if(form.uname.value == "admin" && form.upass.value == "admin")
+			  {
+				window.location.href = 'main.html';/*opens the target page while Id & password matches*/
+			  }
+			 else
+			 {
+			   showConfirm();
+			  }
+			}
   </script>
         </div>
         <div id="footer" data-role="footer" data-position="fixed" data-theme="a">
