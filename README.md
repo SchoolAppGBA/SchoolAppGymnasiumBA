@@ -11,3 +11,4 @@ Copyright Stefan Schmid
 
 ==
 TODO :  - Login mit Session erweitern!
+	- HTC One Menü entfernen
