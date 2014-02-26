@@ -13,8 +13,6 @@
 			{
 			var u = $("#username").val();
 			var p = $("#password").val();
-			console.log(u);
-			console.log(p);
 			 /*the following code checkes whether the entered userid and password are matching*/
 			 if(form.uname.value == "admin" && form.upass.value == "admin")
 			  {
