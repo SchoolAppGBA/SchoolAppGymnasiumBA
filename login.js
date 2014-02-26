@@ -11,13 +11,16 @@
 			/* Check, if uname = Username && upass = password */
 			function check()/*function to check userid & password*/
 			{
+			var checkbox = $("#remember");
 			var u = $("#username").val();
 			var p = $("#password").val();
 			 /*the following code checkes whether the entered userid and password are matching*/
 			 if(form.uname.value == "admin" && form.upass.value == "admin")
 			  {
-				window.localStorage["username"] = u;
-                window.localStorage["password"] = p;
+				if(document.getElementById("remember").checked == true){
+					window.localStorage["username"] = u;
+					window.localStorage["password"] = p;
+				}
 				window.location.href = 'main.html';/*opens the target page while Id & password matches*/
 			  }
 			 else
